@@ -1,26 +1,21 @@
 #include "main.h"
 
 /**
- * print_square -  print squares
- * @size : defines number ofi #
- * Return: On success int
- * On error, 0 is returned, and error is set appropriately.
+ * jack_bauer - prints every minute of the day of jack_bauer,
+ * starting from 00:00 to 23:59.
+ * Return: void.
  */
-void print_square(int size)
+void jack_bauer(void)
 {
-int i = 0;
-int j = 0;
-if (size > 0)
+int h, m;
+for (h = 0; h < 24; h++)
+for (m = 0; m < 60; m++)
 {
-for (i = 0; i < size; i++)
-{
-for (j = 0; j < size; j++)
-{
-_putchar('#');
-}
+_putchar((h / 10) + '0');
+_putchar((h % 10) + '0');
+_putchar(':');
+_putchar((m / 10) + '0');
+_putchar((m % 10) + '0');
 _putchar('\n');
 }
-}
-else
-_putchar('\n');
 }
